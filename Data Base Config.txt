@@ -1,0 +1,20 @@
+
+
+DATABASE_URL="postgresql://car-store-db_owner:LzdgDwUM0A9b@ep-long-meadow-a2nowsl2-pooler.eu-central-1.aws.neon.tech/car-store-db?sslmode=require"
+# uncomment next line if you use Prisma <5.10
+# DATABASE_URL_UNPOOLED="postgresql://car-store-db_owner:LzdgDwUM0A9b@ep-long-meadow-a2nowsl2.eu-central-1.aws.neon.tech/car-store-db?sslmode=require"
+
+
+
+
+
+
+****************************************
+
+// prisma/schema.prisma
+datasource db {
+  provider  = "postgresql"
+  url  	    = env("DATABASE_URL")
+  // uncomment next line if you use Prisma <5.10
+  // directUrl = env("DATABASE_URL_UNPOOLED")
+}
